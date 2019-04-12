@@ -5,12 +5,23 @@ import sys
 import tensorflow as tf
 import skimage.io as io
 import numpy as np
+import argparse
 
-sys.path.append("/home/nowgeun1/Desktop/FCN/")
-sys.path.append("/home/nowgeun1/Desktop/FCN/models/slim/")
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(
+				description = "Enter your FCN_demo path")
+    parser.add_argu,ent("--dir", type=str , help = "Enter your FCN_demo path, exclusing / at the end")
+    args = parser.parse_args()
+
+cwd = args.dir
+if cwd.endswith("/"):
+    cwd = cwd[:-1]
+
+sys.path.append(cwd)
+sys.path.append("{}/models/slim/".format(cwd))
 
 fcn_16s_checkpoint_path = \
- '/home/nowgeun1/Desktop/FCN/tf_image_segmentation/saver/model_fcn8s_final.ckpt'
+ '{}/tf_image_segmentation/saver/model_fcn8s_final.ckpt'.format(cwd)
 
 os.environ["CUDA_VISIBLE_DEVICES"] = '1'
 
@@ -22,7 +33,7 @@ from tf_image_segmentation.utils.pascal_voc import pascal_segmentation_lut
 number_of_classes = 21
 
 
-image_data_folder_path = "/home/nowgeun1/Desktop/FCN/data/"
+image_data_folder_path = "{}/data/".format(cwd)
 image_files = [x for x in os.listdir(image_data_folder_path) if x.endswith((".jpg",".png"))]
 
 
@@ -57,7 +68,7 @@ with tf.Session() as sess:
     sess.run(initializer)
 
     saver.restore(sess,
-     "/home/nowgeun1/Desktop/FCN/tf_image_segmentation/saver/model_fcn8s_final.ckpt")
+     "{}/tf_image_segmentation/saver/model_fcn8s_final.ckpt".format(cwd))
     
     
     for image in image_files:
@@ -69,5 +80,5 @@ with tf.Session() as sess:
     
         image_np, pred_np = sess.run([image_tensor, pred], feed_dict=feed_dict_to_use)
 
-        io.imsave("/home/nowgeun1/Desktop/FCN/tf_image_segmentation/generated/pred_{}".format(image),pred_np.squeeze())
+        io.imsave("{}/tf_image_segmentation/generated/pred_{}".format(cwd , image),np.invert(pred_np.squeeze()))
 
