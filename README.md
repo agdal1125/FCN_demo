@@ -1,0 +1,77 @@
+# Fully Convolutional Neural Network for Semantic Segmentation
+
+#### modified codes from https://github.com/warmspringwinds/tf-image-segmentation
+
+### File Structure
+    .
+    ├── data                # your training data dir
+    |   └──                 # your image data goes here 
+    |
+    ├── fcn_16s_checkpoint     # place pretrained fcn16 model here 
+    |     └── model_fcn16s_final.ckpt.data... # download 
+    |     └── model_fcn16s_final.ckpt.index   # https://www.dropbox.com/s/tmhblqcwqvt2zjo/fcn_16s.tar.gz?dl=0 and 
+    |     └── model_fcn16s_final.ckpt.meta    # unzip it here
+    |     
+    ├── models                 # models --> $ git clone -b fully_conv_vgg https://github.com/warmspringwinds/models
+    |     └── slim
+    |     └──  ...
+    |     └──  ...
+    |     
+    ├── test.py                # python script for testing trained model
+    |
+    ├── tf_image_segmentation
+    |      └── generated       # generated image files
+    |      └── saver           # save folder
+    |      └── log_folder_fcn8 # log folder
+    |     
+    └── README.md
+  
+
+### Dependencies
+- tensorflow r.0.12 or later version
+- $pip3 install scikit-image Pillow matplotlib, numpy
+
+
+### Path Setting
+
+Modify PATHS in "fcn8_train.py"
+
+- VGG16 checkpoint PATH 생성 (http://download.tensorflow.org/models/vgg_16_2016_08_28.tar.gz)
+- SLIM FOLDER PATH 
+  git clone -b fully_conv_vgg https://github.com/warmspringwinds/models
+models/slim 패스 설정
+
+
+### Server Usage (*For Crevasse Only*)
+
+1.개발환경접속
+$source activate fcn
+
+2.모듈 파일 위치로 이동
+$cd /home/nowgeun1/Desktop/FCN/
+
+3.pretrained 된 모델 테스트
+$python3 test.py
+
+4.예측 확인
+/home/nowgeun1/Desktop/FCN/tf_image_segmentation/generated 폴더에 생성
+
+**User Input Data 활용법
+
+테스트 이미지 파일 저장 폴더:
+
+YOUR_WORKING_DIR/FCN_demo/data/
+ex) /home/nowgeun1/Desktop/FCN_demo/data/
+
+
+예측 결과 폴더:
+
+YOUR_WORKING_DIR/FCN_demo/tf_image_segmentation/generated/
+ex) /home/nowgeun1/Desktop/FCN_demo/tf_image_segmentation/generate/
+
+
+
+References:
+
+http://warmspringwinds.github.io/tensorflow/tf-slim/2017/01/23/fully-convolutional-networks-(fcns)-for-image-segmentation/
+https://github.com/warmspringwinds/tf-image-segmentation
