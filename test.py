@@ -19,7 +19,7 @@ from tf_image_segmentation.models.fcn_8s import FCN_8s
 from tf_image_segmentation.utils.inference import adapt_network_for_any_size_input
 from tf_image_segmentation.utils.pascal_voc import pascal_segmentation_lut
 
-number_of_classes = 13
+number_of_classes = 21
 
 
 image_data_folder_path = "/home/nowgeun1/Desktop/FCN/data/"
