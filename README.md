@@ -44,7 +44,7 @@ Modify PATHS in "fcn8_train.py"
 models/slim 패스 설정
 
 ## Usage
-```python
+```sh
 $ condea create -n YOUR_ENV_NAME
 $ source activate YOUR_ENV_NAME
 $ cd YOUR_WORKING_DIR/FCN_demo/
