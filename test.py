@@ -10,7 +10,7 @@ import argparse
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
 				description = "Enter your FCN_demo path")
-    parser.add_argu,ent("--dir", type=str , help = "Enter your FCN_demo path, exclusing / at the end")
+    parser.add_argument("--dir", type=str , help = "Enter your FCN_demo path, exclusing / at the end")
     args = parser.parse_args()
 
 cwd = args.dir
