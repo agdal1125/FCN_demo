@@ -7,17 +7,20 @@
     ├── data                # your training data dir
     |   └──                 # your image data goes here 
     |
-    ├── fcn_16s_checkpoint     # place pretrained fcn16 model here 
+    ├── fcn_16s_checkpoint     # place pretrained fcn16 model here :
     |     └── model_fcn16s_final.ckpt.data... # download 
     |     └── model_fcn16s_final.ckpt.index   # https://www.dropbox.com/s/tmhblqcwqvt2zjo/fcn_16s.tar.gz?dl=0 and 
     |     └── model_fcn16s_final.ckpt.meta    # unzip it here
     |     
-    ├── models                 # models --> $ git clone -b fully_conv_vgg https://github.com/warmspringwinds/models
+    ├── models              
     |     └── slim
     |     └──  ...
     |     └──  ...
     |     
     ├── test.py                # python script for testing trained model
+    |
+    |
+    ├── fcn8_train.py
     |
     ├── tf_image_segmentation
     |      └── generated       # generated image files
@@ -37,9 +40,13 @@
 Modify PATHS in "fcn8_train.py"
 
 - VGG16 checkpoint PATH 생성 (http://download.tensorflow.org/models/vgg_16_2016_08_28.tar.gz)
-- SLIM FOLDER PATH 
-  git clone -b fully_conv_vgg https://github.com/warmspringwinds/models
+
 models/slim 패스 설정
+
+## Usage
+$ condea create -n YOUR_ENV_NAME
+$ source activate YOUR_ENV_NAME
+$ cd YOUR_WORKING_DIR/FCN_demo/
 
 
 ### Server Usage (*For Crevasse Only*)
