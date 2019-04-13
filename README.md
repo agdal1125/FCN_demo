@@ -4,7 +4,7 @@
 
 ### File Structure
     .
-    ├── data                # your training data dir
+    ├── data                # your testing data dir
     |   └──                 # your image data goes here 
     |
     ├── fcn_16s_checkpoint     # place pretrained fcn16 model here :
@@ -44,10 +44,17 @@ Modify PATHS in "fcn8_train.py"
 models/slim 패스 설정
 
 ## Usage
+`
 $ condea create -n YOUR_ENV_NAME
 $ source activate YOUR_ENV_NAME
 $ cd YOUR_WORKING_DIR/FCN_demo/
 
+# To Test segmentation of your image data, place the test data in  "~/FCN_demo/data/" directory 
+
+$ python3 test.py
+
+# You can find the prediction of your image data in  "~/FCN_demo/tf_image_segmentation/generated/"
+`
 
 ### Server Usage (*For Crevasse Only*)
 
