@@ -45,7 +45,7 @@ models/slim 패스 설정
 
 ## Usage
 ```sh
-$ condea create -n YOUR_ENV_NAME
+$ conda create -n YOUR_ENV_NAME
 $ source activate YOUR_ENV_NAME
 $ cd YOUR_WORKING_DIR/FCN_demo/
 
