@@ -44,7 +44,7 @@ Modify PATHS in "fcn8_train.py"
 models/slim 패스 설정
 
 ## Usage
-`
+```python
 $ condea create -n YOUR_ENV_NAME
 $ source activate YOUR_ENV_NAME
 $ cd YOUR_WORKING_DIR/FCN_demo/
@@ -56,7 +56,7 @@ $ python3 test.py --dir YOUR_DIRECTORY_TO_FCN_DEMO
 ex) $ python3 test.py --dir /home/nowgeun1/Desktop/FCN_demo
 
 # You can find the prediction of your image data in  "~/FCN_demo/tf_image_segmentation/generated/"
-`
+```
 
 ### Server Usage (*For Crevasse Only*)
 
