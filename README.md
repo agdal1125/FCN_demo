@@ -32,7 +32,7 @@
 
 ### Dependencies
 - tensorflow r.0.12 or later version
-- $pip3 install scikit-image Pillow matplotlib, numpy
+- $pip3 install scikit-image Pillow matplotlib, numpy, tensorflow
 
 
 ### Path Setting
