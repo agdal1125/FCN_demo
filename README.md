@@ -51,7 +51,9 @@ $ cd YOUR_WORKING_DIR/FCN_demo/
 
 # To Test segmentation of your image data, place the test data in  "~/FCN_demo/data/" directory 
 
-$ python3 test.py
+$ python3 test.py --dir YOUR_DIRECTORY_TO_FCN_DEMO
+
+ex) $ python3 test.py --dir /home/nowgeun1/Desktop/FCN_demo
 
 # You can find the prediction of your image data in  "~/FCN_demo/tf_image_segmentation/generated/"
 `
