@@ -6,11 +6,12 @@ import tensorflow as tf
 import skimage.io as io
 import numpy as np
 import argparse
+from bg_extract import background_extractor
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
 				description = "Enter your FCN_demo path")
-    parser.add_argu,ent("--dir", type=str , help = "Enter your FCN_demo path, exclusing / at the end")
+    parser.add_argument("--dir", type=str , help = "Enter your FCN_demo path, exclusing / at the end")
     args = parser.parse_args()
 
 cwd = args.dir
@@ -81,4 +82,6 @@ with tf.Session() as sess:
         image_np, pred_np = sess.run([image_tensor, pred], feed_dict=feed_dict_to_use)
 
         io.imsave("{}/tf_image_segmentation/generated/pred_{}".format(cwd , image),np.invert(pred_np.squeeze()))
+
+        background_extractor(cwd+"/",image_filename, image_np, pred_np.squeeze())
 
