@@ -26,6 +26,7 @@
     |      └── generated       # generated image files
     |      └── saver           # save folder
     |      └── log_folder_fcn8 # log folder
+    |      └── testing         # background image, person cropped files
     |     
     └── README.md
   
