@@ -26,7 +26,8 @@
     |      └── generated       # generated image files
     |      └── saver           # save folder
     |      └── log_folder_fcn8 # log folder
-    |      └── testing         # background image, person cropped files
+    |      └── background_extracted # generated background images without person
+    |      └── person_extracted # generated person images without background
     |     
     └── README.md
   
@@ -57,6 +58,8 @@ $ python3 test.py --dir YOUR_DIRECTORY_TO_FCN_DEMO
 ex) $ python3 test.py --dir /home/nowgeun1/Desktop/FCN_demo
 
 # You can find the prediction of your image data in  "~/FCN_demo/tf_image_segmentation/generated/"
+# You can find extracted background image in "~/FCN_demo/tf_image_segmentation/background_extracted/"
+# You can find person background image in "~/FCN_demo/tf_image_segmentation/person_extracted/"
 ```
 
 ### Server Usage (*For Crevasse Only*)
@@ -71,7 +74,9 @@ $cd /home/nowgeun1/Desktop/FCN/
 $python3 test.py
 
 4.예측 확인
-/home/nowgeun1/Desktop/FCN/tf_image_segmentation/generated 폴더에 생성
+/home/nowgeun1/Desktop/FCN/tf_image_segmentation/generated/
+/home/nowgeun1/Desktop/FCN/tf_image_segmentation/background_extracted/
+/home/nowgeun1/Desktop/FCN/tf_image_segmentation/person_extracted/
 
 **User Input Data 활용법
 
@@ -84,7 +89,7 @@ ex) /home/nowgeun1/Desktop/FCN_demo/data/
 예측 결과 폴더:
 
 YOUR_WORKING_DIR/FCN_demo/tf_image_segmentation/generated/
-ex) /home/nowgeun1/Desktop/FCN_demo/tf_image_segmentation/generate/
+ex) /home/nowgeun1/Desktop/FCN_demo/tf_image_segmentation/generated/
 
 
 
