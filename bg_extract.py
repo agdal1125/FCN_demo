@@ -7,6 +7,16 @@ def background_extractor(save_dir,imagefilename, image, seg_image):  # image: re
     bg_true = seg_image == -1
     mask[bg_true] = 1
 
-    image = image*mask
+    b_image = image*mask
     
-    io.imsave(save_dir+"bg_of_{}".format(imagefilename.split(".")[0]+".png"),image)
+    io.imsave(save_dir+"bg_of_{}".format(imagefilename.split(".")[0]+".png"),b_image)
+
+def person_extractor(save_dir,imagefilename, image, seg_image):
+    
+    mask = np.zeros(shape=image.shape, dtype=int)
+    p_true = seg_image == -16
+    mask[p_true] = 1
+
+    p_image = image*mask
+    
+    io.imsave(save_dir+"p_of_{}".format(imagefilename.split(".")[0]+".png"),p_image)

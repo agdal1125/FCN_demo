@@ -6,7 +6,7 @@ import tensorflow as tf
 import skimage.io as io
 import numpy as np
 import argparse
-from bg_extract import background_extractor
+from bg_extract import background_extractor, person_extractor
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
@@ -84,4 +84,5 @@ with tf.Session() as sess:
         io.imsave("{}/tf_image_segmentation/generated/pred_{}".format(cwd , image),np.invert(pred_np.squeeze()))
 
         background_extractor(cwd+"/",image_filename, image_np, pred_np.squeeze())
+        person_extractor(cwd+"/",image_filename, image_np, pred_np.squeeze())
 
