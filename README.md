@@ -83,12 +83,14 @@ $python3 test.py
 테스트 이미지 파일 저장 폴더:
 
 YOUR_WORKING_DIR/FCN_demo/data/
+
 ex) /home/nowgeun1/Desktop/FCN_demo/data/
 
 
 예측 결과 폴더:
 
 YOUR_WORKING_DIR/FCN_demo/tf_image_segmentation/generated/
+
 ex) /home/nowgeun1/Desktop/FCN_demo/tf_image_segmentation/generated/
 
 
