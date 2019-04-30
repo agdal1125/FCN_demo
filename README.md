@@ -39,11 +39,10 @@
 
 ### Path Setting
 
-Modify PATHS in "fcn8_train.py"
+you just have to put your working directory as an argument, stated in the usage below
 
-- VGG16 checkpoint PATH 생성 (http://download.tensorflow.org/models/vgg_16_2016_08_28.tar.gz)
+*--dir YOUR_DIRECTORY_TO_FCN_DEMO*
 
-models/slim 패스 설정
 
 ## Usage
 ```sh
