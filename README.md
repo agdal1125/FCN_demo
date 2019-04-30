@@ -84,7 +84,7 @@ ex) $ python3 test.py --dir /home/nowgeun1/Desktop/FCN_demo
 /home/nowgeun1/Desktop/FCN/tf_image_segmentation/background_extracted/
 /home/nowgeun1/Desktop/FCN/tf_image_segmentation/person_extracted/
 `
-\n
+
 
 **User Input Data 활용법
 
