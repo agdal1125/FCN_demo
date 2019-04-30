@@ -67,13 +67,22 @@ ex) $ python3 test.py --dir /home/nowgeun1/Desktop/FCN_demo
 1.개발환경접속
 $source activate fcn
 
+
+
 2.모듈 파일 위치로 이동
+
 $cd /home/nowgeun1/Desktop/FCN/
 
+
+
 3.pretrained 된 모델 테스트
+
 $python3 test.py
 
+
+
 4.예측 확인
+
 /home/nowgeun1/Desktop/FCN/tf_image_segmentation/generated/
 /home/nowgeun1/Desktop/FCN/tf_image_segmentation/background_extracted/
 /home/nowgeun1/Desktop/FCN/tf_image_segmentation/person_extracted/
