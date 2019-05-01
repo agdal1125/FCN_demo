@@ -25,9 +25,9 @@
     ├── tf_image_segmentation
     |      └── generated       # generated image files
     |      └── saver           # save folder
-    |           └── model_fcn16s_final.ckpt.data... # download 
-    |           └── model_fcn16s_final.ckpt.index   # 
-    |           └── model_fcn16s_final.ckpt.meta    #  
+    |           └── model_fcn8s_final.ckpt.data... # download 
+    |           └── model_fcn8s_final.ckpt.index   # https://www.dropbox.com/s/7r6lnilgt78ljia/fcn_8s.tar.gz?dl=0
+    |           └── model_fcn8s_final.ckpt.meta    # unzip it here
     |      |
     |      └── log_folder_fcn8 # log folder
     |      └── background_extracted # generated background images without person
