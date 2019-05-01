@@ -25,6 +25,10 @@
     ├── tf_image_segmentation
     |      └── generated       # generated image files
     |      └── saver           # save folder
+    |           └── model_fcn16s_final.ckpt.data... # download 
+    |           └── model_fcn16s_final.ckpt.index   # 
+    |           └── model_fcn16s_final.ckpt.meta    #  
+    |      |
     |      └── log_folder_fcn8 # log folder
     |      └── background_extracted # generated background images without person
     |      └── person_extracted # generated person images without background
