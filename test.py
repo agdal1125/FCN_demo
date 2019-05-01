@@ -83,6 +83,7 @@ with tf.Session() as sess:
 
         io.imsave("{}/tf_image_segmentation/generated/pred_{}".format(cwd , image),np.invert(pred_np.squeeze()))
 
-        background_extractor(cwd+"/",image_filename, image_np, pred_np.squeeze())
-        person_extractor(cwd+"/",image_filename, image_np, pred_np.squeeze())
+        background_extractor(str(cwd)+"/tf_image_segmentation/background_extracted/",image, image_np, np.invert(pred_np.squeeze()))
+
+        person_extractor(str(cwd)+"/tf_image_segmentation/person_extracted/",image, image_np, np.invert(pred_np.squeeze()))
 
