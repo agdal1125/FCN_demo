@@ -1,5 +1,15 @@
 # Fully Convolutional Neural Network for Semantic Segmentation
 
+
+
+#### Functions
+
+- Extract person from image
+- Extract background from image
+- Extract person with transparent background
+
+
+
 #### modified codes from https://github.com/warmspringwinds/tf-image-segmentation
 
 ### File Structure
